@@ -89,7 +89,7 @@ The application will launch at:
 http://localhost:8501
 </pre>
 
-<h3>Business Applications</h3><Br>
+<h3>Business Applications</h3>
 
 - **Revenue Forecasting & Financial Planning**  
 - **Inventory Optimization**  
@@ -97,7 +97,7 @@ http://localhost:8501
 - **Executive Decision Support**  
 - **AI-Powered Retail Analytics**  
 
-<h3>Roadmap</h3><br>
+<h3>Roadmap</h3>
 
 - Model Persistence & Checkpoint Saving  
 - MLOps Pipeline Integration  
@@ -105,8 +105,8 @@ http://localhost:8501
 - Model Benchmarking (Prophet / XGBoost / LSTM Baseline)  
 - Real-Time Streaming Data Integration  
 
-<h3> License</h3><br>
-This project is licensed under the **MIT License**.
+<h3> License</h3>
+This project is licensed under the MIT License.
 
-<h3>Author</h3><br>
-Developed as a production-ready **AI Sales Forecasting & Product Demand**.
+<h3>Author</h3>
+Developed as a production-ready AI Sales Forecasting & Product Demand platform.
