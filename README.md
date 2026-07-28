@@ -1,4 +1,4 @@
-<h1 align="left"><b>AI Sales Forecasting & Product Demand</b></h1>
+<h1 align="left"><b>AI-Sales-Forecasting-Demand-Prediction</b></h1>
 
 An advanced AI-powered Sales Forecasting Dashboard built with Streamlit, combining Bi-Directional LSTM and Transformer Attention architectures to predict future revenue and analyze product demand trends.This interactive dashboard enables businesses to explore sales insights, visualize demand patterns, and generate 30-day AI-based revenue projections.
 <h2>Overview</h2><br>
