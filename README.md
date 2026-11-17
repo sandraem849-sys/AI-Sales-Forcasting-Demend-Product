@@ -1,112 +1,125 @@
-<h1 align="left"><b>AI-Sales-Forecasting-Demand-Prediction</b></h1>
+# AI Sales Forecasting & Demand Prediction
 
-An advanced AI-powered Sales Forecasting Dashboard built with Streamlit, combining Bi-Directional LSTM and Transformer Attention architectures to predict future revenue and analyze product demand trends.This interactive dashboard enables businesses to explore sales insights, visualize demand patterns, and generate 30-day AI-based revenue projections.
-<h2>Overview</h2><br>
+A sales forecasting dashboard built with Streamlit. It combines a Bidirectional LSTM and a Transformer Attention block to predict future revenue and analyse product demand trends. The dashboard lets users explore sales insights, view demand patterns and generate 30-day revenue projections.
 
-The system enables organizations to:-
+**Live demo:** [add your Streamlit app link here]
 
-1.Monitor revenue KPIs in real time
+## Overview
 
-2.Identify high-performing product categories
+The dashboard lets users:
 
-4.Analyze temporal demand patterns
+1. Track revenue KPIs
+2. Identify high-performing product categories
+3. Analyse demand patterns over time
+4. Generate 30-day revenue forecasts
+5. Compare forecasts across product categories
 
-5.Generate AI-driven 30-day revenue forecasts
+## Model Architecture
 
-6.Compare category-level future projections
+The forecasting model combines:
 
-It bridges Deep Learning Forecasting with Business Intelligence visualization in a unified, production-ready interface.
-<h2>AI Model Architecture</h2><br>
+1. **Bidirectional LSTM** to capture temporal dependencies
+2. **Transformer Attention block** for contextual sequence learning
+3. **LSTM + Dense layers** with multi-quantile regression output (P10 / P50 / P90)
 
-The forecasting engine combines:
+### Pipeline
 
-1.Bi-Directional LSTM for capturing temporal dependencies
+```
+Input Data (sales_data.csv)
+        ↓
+MinMax Scaling
+        ↓
+Sequence Generation
+        ↓
+Bidirectional LSTM
+        ↓
+Transformer Attention
+        ↓
+LSTM + Dense Layers
+        ↓
+P10 | P50 | P90 Forecast Output
+        ↓
+Interactive Streamlit Dashboard
+```
 
-2.Transformer Attention Block for contextual sequence learning
-
-3.Dense layers for multi-quantile regression output
-<h3> Core Features</h3> 
+## Features
 
 | Category | Capabilities |
-|-----------|-------------|
-| **Business Intelligence** | Revenue KPIs, Category Leaderboard, Demand Classification, Market Share Visualization, Heatmap |
-| **Forecasting Engine** | 80/20 Split, Multi-Quantile Output (P10/P50/P90), 30-Day Projection, Inverse Scaling |
+|---|---|
+| **Business Intelligence** | Revenue KPIs, Category Leaderboard, Demand Classification, Market Share Visualisation, Heatmap |
+| **Forecasting** | 80/20 train-test split, Multi-Quantile Output (P10/P50/P90), 30-Day Projection, Inverse Scaling |
 | **Interactive Analytics** | Category Filtering, Comparative Forecasting, Plotly Charts, Dark UI |
-<h2 align="left">Architecture Flow</h2>
-<p align="left">
-Input Data<br>
-↓<br>
-MinMax Scaling<br>
-↓<br>
-Sequence Generation<br>
-↓<br>
-BiLSTM<br>
-↓<br>
-Transformer Attention<br>
-↓<br>
-LSTM + Dense Layers<br>
-↓<br>
-P10 | P50 | P90 Forecast Output<br>
-↓<br>
-Interactive Dashboard
-</p>
-<h3>Tech Stack</h3>
+
+## Results
+
+| Metric | Value |
+|---|---|
+| RMSE (test set) | ≈ ₹2,880 |
+| MAE (test set) | ≈ ₹2,510 |
+
+Average of 3 runs (15 epochs, sequence length 30, 80/20 split, 194 test samples). Exact values vary slightly between runs.
+
+## Tech Stack
 
 | Layer | Technology |
-|-------|------------|
-| **UI Framework** | Streamlit |
-| **Deep Learning** | TensorFlow / Keras |
-| **Data Processing** | Pandas, NumPy |
-| **Visualization** | Plotly |
-| **Preprocessing** | Scikit-learn |
-| **Language** | Python 3.9+ |
-<h2>Installation & Setup</h2>
+|---|---|
+| UI Framework | Streamlit |
+| Deep Learning | TensorFlow / Keras |
+| Data Processing | Pandas, NumPy |
+| Visualisation | Plotly |
+| Preprocessing | Scikit-learn |
+| Language | Python 3.9+ |
 
-<b>1. Clone the Repository</b>
+## Project Structure
 
-<pre>
-git clone https://github.com/your-username/ai-sales-forecasting.git
-cd ai-sales-forecasting
-</pre>
+```
+├── app.py            # Streamlit dashboard and model code
+├── sales_data.csv    # Sales dataset
+├── requirements.txt  # Python dependencies
+└── README.md
+```
 
-<b>2. Install Dependencies</b>
+## Installation & Setup
 
-<pre>
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/sandraem849-sys/AI-Sales-Forcasting-Demend-Product.git
+cd AI-Sales-Forcasting-Demend-Product
+```
+
+**2. Install dependencies**
+
+```bash
 pip install -r requirements.txt
-# or install manually
-pip install streamlit tensorflow pandas numpy plotly scikit-learn
-</pre>
+```
 
-<b>3️. Run the Application</b>
+**3. Run the application**
 
-<pre>
+```bash
 streamlit run app.py
-</pre>
+```
 
-The application will launch at:
+The app opens at `http://localhost:8501`.
 
-<pre>
-http://localhost:8501
-</pre>
+## Business Applications
 
-<h3>Business Applications</h3>
+- Revenue forecasting and financial planning
+- Inventory optimisation
+- Demand intelligence
+- Retail analytics
 
-- **Revenue Forecasting & Financial Planning**  
-- **Inventory Optimization**  
-- **Demand Intelligence**  
-- **Executive Decision Support**  
-- **AI-Powered Retail Analytics**  
+## Roadmap
 
-<h3>Roadmap</h3>
+- Model benchmarking against Prophet, XGBoost and a plain LSTM baseline
+- Model persistence and checkpoint saving
+- Cloud deployment
+- Streaming data integration
 
-- Model Persistence & Checkpoint Saving  
-- MLOps Pipeline Integration  
-- Cloud Deployment (AWS / GCP / Azure)  
-- Model Benchmarking (Prophet / XGBoost / LSTM Baseline)  
-- Real-Time Streaming Data Integration  
+## License
 
-<h3> License</h3>
 This project is licensed under the MIT License.
 
-<h3>Author</h3>
-Developed as a production-ready AI Sales Forecasting & Product Demand platform.
+## Author
+
+Sandra E M | [LinkedIn](https://linkedin.com/in/sandra-e-m-829858349) | [GitHub](https://github.com/sandraem849-sys)
